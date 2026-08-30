@@ -163,7 +163,7 @@ python -m scripts.module_d.generate_comparison \
 
 相关环境说明可参考：
 
-- requirements-module-c-qlora.txt
+- requirements.txt
 - scripts/module_c/README.md
 - scripts/module_d/README.md
 
