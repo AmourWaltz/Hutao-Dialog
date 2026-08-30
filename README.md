@@ -23,7 +23,7 @@
 ```text
 .
 ├── README.md
-├── requirements-module-c-qlora.txt
+├── requirements.txt
 ├── configs/
 │   └── module_c/
 ├── data/
