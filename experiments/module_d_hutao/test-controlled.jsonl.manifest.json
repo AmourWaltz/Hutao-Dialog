@@ -1,0 +1,84 @@
+{
+  "adapter_provenance": "training_final",
+  "attention_implementation": "eager",
+  "base_model": "Qwen/Qwen3-1.7B",
+  "base_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "base_runtime": {
+    "adapter_config_sha256": null,
+    "adapter_path": null,
+    "adapter_sha256": null,
+    "attention_implementation_requested": "eager",
+    "attention_implementation_resolved": "eager",
+    "bos_token_id": null,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+    "cuda_device_count": 1,
+    "dtype_actual_first_parameter": "torch.bfloat16",
+    "dtype_requested": "bfloat16",
+    "eos_token_id": 151645,
+    "first_parameter_device": "cuda:0",
+    "hf_device_map": null,
+    "model_label": "base",
+    "model_name_or_path": "Qwen/Qwen3-1.7B",
+    "pad_token_id": 151643,
+    "padding_side": "right",
+    "resolved_commit": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
+  },
+  "chat_template_kwargs": {
+    "enable_thinking": false
+  },
+  "comparisons": 50,
+  "experiment_config_sha256": "f6ea16ce572fa06cd92eca0790787573ad1dce1c1b39b3c514f1243acbb7d936",
+  "generation_config": {
+    "do_sample": false,
+    "max_new_tokens": 192,
+    "num_beams": 1,
+    "seed": 42
+  },
+  "lora_adapter": "experiments/module_c_hutao/runs/hutao_qwen3_1p7b_lora_bf16_seed42/adapter-final",
+  "lora_runtime": {
+    "adapter_config_sha256": "ac97d757dfb7c2460faa5b73462bcca779575abd9f715846ff2daf74c027e033",
+    "adapter_path": "experiments/module_c_hutao/runs/hutao_qwen3_1p7b_lora_bf16_seed42/adapter-final",
+    "adapter_sha256": "b0f9c7f0c1849af54f6e51e53b07dde3ba74f5b242f1acb4d53101595afb3c7b",
+    "attention_implementation_requested": "eager",
+    "attention_implementation_resolved": "eager",
+    "bos_token_id": null,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+    "cuda_device_count": 1,
+    "dtype_actual_first_parameter": "torch.bfloat16",
+    "dtype_requested": "bfloat16",
+    "eos_token_id": 151645,
+    "first_parameter_device": "cuda:0",
+    "hf_device_map": null,
+    "model_label": "lora",
+    "model_name_or_path": "Qwen/Qwen3-1.7B",
+    "pad_token_id": 151643,
+    "padding_side": "right",
+    "resolved_commit": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
+  },
+  "mode": "controlled_gold_history",
+  "output": "/misc/kfdata01/kf_grp/byxue/hutao/IEG_Codex/experiments/module_d_hutao/test-controlled.jsonl",
+  "output_sha256": "27e0568cdc0634468fea03f60736cd4d6dbba294951f23d8e107ca5ad0b30ed0",
+  "python_hash_seed": "42",
+  "records": 43,
+  "run_manifest": "/misc/kfdata01/kf_grp/byxue/hutao/IEG_Codex/experiments/module_c_hutao/runs/hutao_qwen3_1p7b_lora_bf16_seed42/run_manifest.json",
+  "run_manifest_sha256": "b76905615063b614fc41674b08837f9bc07e10a2763d4a82a8c1882ff8e04234",
+  "schema_version": "module_d.generation_manifest.v1",
+  "selected_adapter_config_sha256": "ac97d757dfb7c2460faa5b73462bcca779575abd9f715846ff2daf74c027e033",
+  "selected_adapter_sha256": "b0f9c7f0c1849af54f6e51e53b07dde3ba74f5b242f1acb4d53101595afb3c7b",
+  "selection_manifest": null,
+  "selection_manifest_sha256": null,
+  "source_sha256": {
+    "test": "d9e1f88a9ac180e2f08330f01b7093542ee6a8d59665745ad70280e1341ccf2c"
+  },
+  "splits": [
+    "test"
+  ]
+}

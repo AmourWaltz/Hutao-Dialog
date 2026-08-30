@@ -1,0 +1,3 @@
+-r requirements-module-c.txt
+bitsandbytes==0.50.0
+

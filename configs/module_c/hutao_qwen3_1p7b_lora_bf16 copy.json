@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "experiment_status": "canonical",
+  "experiment_name": "hutao_qwen3_1p7b_lora_bf16_seed42",
+  "runtime": {
+    "python_major_minor": "3.11",
+    "requirements_file": "requirements-module-c.txt",
+    "requirements_sha256": "ad21e9315015e28c13ced8182b768f969822c7f44a9155a06a868c497aef9088",
+    "lock_file": "requirements-module-c-lock-cu126.txt",
+    "lock_sha256": "b073b807cd52483d9c03d8f4317d139195886aeb9730906cf3e2ab4f0c902d85",
+    "require_cuda": true,
+    "world_size": 1,
+    "visible_cuda_devices": 1
+  },
+  "model": {
+    "name": "Qwen/Qwen3-1.7B",
+    "dtype": "bfloat16",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
+  },
+  "data": {
+    "derived_dir": "data/module_c_hutao",
+    "max_length": 256,
+    "pad_to_multiple_of": 8,
+    "packing": false
+  },
+  "method": {
+    "name": "lora",
+    "lora": {
+      "rank": 16,
+      "alpha": 32,
+      "dropout": 0.05,
+      "adapter_dtype": "float32",
+      "target_modules": ["q_proj", "v_proj"],
+      "bias": "none"
+    }
+  },
+  "training": {
+    "output_dir": "experiments/module_c_hutao/runs/hutao_qwen3_1p7b_lora_bf16_seed42",
+    "num_train_epochs": 5,
+    "per_device_train_batch_size": 4,
+    "per_device_eval_batch_size": 8,
+    "gradient_accumulation_steps": 4,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.01,
+    "lr_scheduler_type": "cosine",
+    "warmup_ratio": 0.1,
+    "max_grad_norm": 1.0,
+    "logging_steps": 1,
+    "eval_strategy": "epoch",
+    "save_strategy": "epoch",
+    "save_total_limit": 5,
+    "seed": 42,
+    "data_seed": 42,
+    "full_determinism": true,
+    "dataloader_num_workers": 0,
+    "dataloader_drop_last": false,
+    "auto_find_batch_size": false,
+    "tf32": false,
+    "gradient_checkpointing": false,
+    "optimizer": "adamw_torch",
+    "report_to": [
+      "tensorboard"
+    ]
+  },
+  "checkpoint_selection": {
+    "metric": "capability_macro_nll",
+    "greater_is_better": false,
+    "relative_tie_tolerance": 0.005,
+    "prefer_earlier_on_tie": true,
+    "required_safety_records": [
+      "HT-WLD-G07-V1",
+      "HT-WLD-G07-V2"
+    ]
+  },
+  "generation": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 192,
+    "seed": 42
+  }
+}

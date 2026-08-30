@@ -1,0 +1,273 @@
+{
+  "assistant_content_statistics": {
+    "maximum_per_turn": 159,
+    "mean_per_turn": 64.62,
+    "median_per_turn": 66.0,
+    "minimum_per_turn": 13,
+    "total_characters": 38515
+  },
+  "assistant_turn_policy": {
+    "curated_module_b": "all",
+    "imported_all_samples": "final_only"
+  },
+  "capabilities": {
+    "business_humor": 20,
+    "crisis_leadership": 44,
+    "daily_chat": 56,
+    "empathy_grief_support": 56,
+    "knowledge_boundary": 24,
+    "professional_funeral": 56,
+    "relationship_sensitive": 80,
+    "wordplay_poetry": 38,
+    "worldview_life_death": 56
+  },
+  "capabilities_by_split": {
+    "business_humor": {
+      "test": 2,
+      "train": 16,
+      "validation": 2
+    },
+    "crisis_leadership": {
+      "test": 5,
+      "train": 34,
+      "validation": 5
+    },
+    "daily_chat": {
+      "test": 5,
+      "train": 46,
+      "validation": 5
+    },
+    "empathy_grief_support": {
+      "test": 5,
+      "train": 46,
+      "validation": 5
+    },
+    "knowledge_boundary": {
+      "test": 3,
+      "train": 18,
+      "validation": 3
+    },
+    "professional_funeral": {
+      "test": 5,
+      "train": 46,
+      "validation": 5
+    },
+    "relationship_sensitive": {
+      "test": 8,
+      "train": 64,
+      "validation": 8
+    },
+    "wordplay_poetry": {
+      "test": 5,
+      "train": 28,
+      "validation": 5
+    },
+    "worldview_life_death": {
+      "test": 5,
+      "train": 46,
+      "validation": 5
+    }
+  },
+  "counts": {
+    "assistant_turns_raw": 596,
+    "assistant_turns_supervised": 506,
+    "assistant_turns_supervised_by_split": {
+      "test": 50,
+      "train": 406,
+      "validation": 50
+    },
+    "external_source_records": 32,
+    "external_source_refs": 16,
+    "multi_turn_records": 166,
+    "records": 430,
+    "scenario_groups": 170,
+    "single_turn_records": 264,
+    "source_records": {
+      "curated_module_b": 160,
+      "imported_all_samples": 270
+    },
+    "source_records_by_split": {
+      "curated_module_b": {
+        "test": 16,
+        "train": 128,
+        "validation": 16
+      },
+      "imported_all_samples": {
+        "test": 27,
+        "train": 216,
+        "validation": 27
+      }
+    },
+    "splits": {
+      "test": 43,
+      "train": 344,
+      "validation": 43
+    },
+    "user_turns": 596
+  },
+  "dataset_name": "hutao_persona_grounded_sft_zh",
+  "external_source_policy": {
+    "field": "metadata.external_source",
+    "records": 32,
+    "reference_format": "all_samples.jsonl:L<physical-line-number>",
+    "source_file": "all_samples.jsonl",
+    "unique_references": 16
+  },
+  "files": {
+    "all.jsonl": {
+      "records": 430,
+      "sha256": "cb8b9bc0224baba5559e1121d1a452a8ddd62fcd4d299c40df4fbb817628b8f7"
+    },
+    "schema.json": {
+      "sha256": "5ed6ec49e6324510e978be73b0812abf424f2c43b9fdb965f52db91a7b8789e5"
+    },
+    "test.jsonl": {
+      "records": 43,
+      "sha256": "d9e1f88a9ac180e2f08330f01b7093542ee6a8d59665745ad70280e1341ccf2c"
+    },
+    "train.jsonl": {
+      "records": 344,
+      "sha256": "5da8a647e0f1f52a90abb3814cbf3b1cc82a46ad146bd184e75ef7a8df91fe10"
+    },
+    "validation.jsonl": {
+      "records": 43,
+      "sha256": "42562316c1a2fa3f83313154c75b08ff53b6ab5fd19526e315ba3be08cd8af0d"
+    }
+  },
+  "format": "messages_jsonl",
+  "generated_by": "scripts/module_b/build_dataset.py",
+  "inputs": {
+    "all_samples.jsonl": {
+      "records": 270,
+      "sha256": "dc095fae59afd0832b52d21190f890dcc69277c11e9c26b9e3521a331405826a"
+    },
+    "category_sources": [
+      {
+        "file": "data/module_b_hutao/categories/business_relationship.jsonl",
+        "records": 40,
+        "sha256": "030e33df585b47bb40c3084405b0212d08d0dd554ac63de1b6e25c73be7a73e6"
+      },
+      {
+        "file": "data/module_b_hutao/categories/daily_wordplay.jsonl",
+        "records": 40,
+        "sha256": "d5301e988b11080da30f7bc300196f5d6f3a86e42eef8c0170feaed7927a49ae"
+      },
+      {
+        "file": "data/module_b_hutao/categories/empathy_crisis.jsonl",
+        "records": 40,
+        "sha256": "56edbab169a512021d6cf8e15561f21e6d3d0fd46ee60bcc2495ec5511d24714"
+      },
+      {
+        "file": "data/module_b_hutao/categories/imported_all_samples.jsonl",
+        "records": 270,
+        "sha256": "61ae3a46616a79f91df119d2be66d07c549fc64489ab5d12e0b6d920f0b994d5"
+      },
+      {
+        "file": "data/module_b_hutao/categories/professional_worldview.jsonl",
+        "records": 40,
+        "sha256": "f0eb9d0e63f5f855680b709088a9d36b52be5af650b7e6bfd311137f1681090d"
+      }
+    ]
+  },
+  "language": "zh-CN",
+  "profile": "modern_safety_adapted_character_assistant",
+  "schema_version": "2.0",
+  "split_policy": {
+    "conflict_aware_overrides": [
+      {
+        "assigned_split": "train",
+        "original_split": "test",
+        "scenario_group": "EXT-hutao-business_professional-family_ceremony_dispute",
+        "scene": "family_ceremony_dispute"
+      },
+      {
+        "assigned_split": "validation",
+        "original_split": "train",
+        "scenario_group": "EXT-hutao-liyue_relationships-funeral_unlucky",
+        "scene": "funeral_unlucky"
+      },
+      {
+        "assigned_split": "test",
+        "original_split": "train",
+        "scenario_group": "EXT-hutao-safety_crisis-hearing_ghosts",
+        "scene": "hearing_ghosts"
+      },
+      {
+        "assigned_split": "validation",
+        "original_split": "train",
+        "scenario_group": "EXT-hutao-safety_crisis-immediate_self_harm",
+        "scene": "immediate_self_harm"
+      },
+      {
+        "assigned_split": "test",
+        "original_split": "train",
+        "scenario_group": "EXT-hutao-liyue_relationships-laomeng_error",
+        "scene": "laomeng_error"
+      },
+      {
+        "assigned_split": "validation",
+        "original_split": "train",
+        "scenario_group": "EXT-hutao-daily_playful-long_queue",
+        "scene": "long_queue"
+      },
+      {
+        "assigned_split": "train",
+        "original_split": "test",
+        "scenario_group": "EXT-hutao-safety_crisis-panic_attack",
+        "scene": "panic_attack"
+      },
+      {
+        "assigned_split": "test",
+        "original_split": "train",
+        "scenario_group": "EXT-hutao-business_professional-public_promotion",
+        "scene": "public_promotion"
+      },
+      {
+        "assigned_split": "train",
+        "original_split": "test",
+        "scenario_group": "EXT-hutao-liyue_relationships-qiqi_burial_meme",
+        "scene": "qiqi_burial_meme"
+      },
+      {
+        "assigned_split": "train",
+        "original_split": "valid",
+        "scenario_group": "EXT-hutao-daily_playful-rainy_departure",
+        "scene": "rainy_departure"
+      },
+      {
+        "assigned_split": "train",
+        "original_split": "valid",
+        "scenario_group": "EXT-hutao-safety_crisis-revenge_weapon",
+        "scene": "revenge_weapon"
+      },
+      {
+        "assigned_split": "train",
+        "original_split": "test",
+        "scenario_group": "EXT-hutao-life_death_values-wish_immortality",
+        "scene": "wish_immortality"
+      },
+      {
+        "assigned_split": "test",
+        "original_split": "train",
+        "scenario_group": "EXT-hutao-life_death_values-wishes_vs_family",
+        "scene": "wishes_vs_family"
+      },
+      {
+        "assigned_split": "train",
+        "original_split": "valid",
+        "scenario_group": "EXT-hutao-liyue_relationships-zhongli_authority",
+        "scene": "zhongli_authority"
+      }
+    ],
+    "distribution_preserved": true,
+    "imported_base_mapping": {
+      "test": "test",
+      "train": "train",
+      "valid": "validation"
+    },
+    "override_count": 14,
+    "reason": "Swap high-confidence semantic conflicts with legacy held-out concepts while preserving imported split and category totals.",
+    "unit": "scenario_group"
+  },
+  "version": "2.0"
+}

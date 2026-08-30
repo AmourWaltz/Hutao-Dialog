@@ -1,0 +1,125 @@
+{
+  "status": "pass",
+  "records": 430,
+  "split_counts": {
+    "train": 344,
+    "validation": 43,
+    "test": 43
+  },
+  "source_counts": {
+    "curated_module_b": 160,
+    "imported_all_samples": 270
+  },
+  "source_split_counts": {
+    "curated_module_b": {
+      "train": 128,
+      "validation": 16,
+      "test": 16
+    },
+    "imported_all_samples": {
+      "train": 216,
+      "validation": 27,
+      "test": 27
+    }
+  },
+  "capability_counts": {
+    "business_humor": 20,
+    "crisis_leadership": 44,
+    "daily_chat": 56,
+    "empathy_grief_support": 56,
+    "knowledge_boundary": 24,
+    "professional_funeral": 56,
+    "relationship_sensitive": 80,
+    "wordplay_poetry": 38,
+    "worldview_life_death": 56
+  },
+  "capability_split_counts": {
+    "business_humor": {
+      "train": 16,
+      "validation": 2,
+      "test": 2
+    },
+    "crisis_leadership": {
+      "train": 34,
+      "validation": 5,
+      "test": 5
+    },
+    "daily_chat": {
+      "train": 46,
+      "validation": 5,
+      "test": 5
+    },
+    "empathy_grief_support": {
+      "train": 46,
+      "validation": 5,
+      "test": 5
+    },
+    "knowledge_boundary": {
+      "train": 18,
+      "validation": 3,
+      "test": 3
+    },
+    "professional_funeral": {
+      "train": 46,
+      "validation": 5,
+      "test": 5
+    },
+    "relationship_sensitive": {
+      "train": 64,
+      "validation": 8,
+      "test": 8
+    },
+    "wordplay_poetry": {
+      "train": 28,
+      "validation": 5,
+      "test": 5
+    },
+    "worldview_life_death": {
+      "train": 46,
+      "validation": 5,
+      "test": 5
+    }
+  },
+  "message_turns": {
+    "assistant_raw": 596,
+    "assistant_supervised": 506,
+    "assistant_supervised_by_split": {
+      "train": 406,
+      "validation": 50,
+      "test": 50
+    }
+  },
+  "multi_turn_records": 166,
+  "multi_turn_ratio": 0.386,
+  "supervised_assistant_characters": {
+    "minimum": 17,
+    "median": 75.0,
+    "mean": 86.09,
+    "maximum": 258,
+    "total": 37018
+  },
+  "duplicate_policy": {
+    "allowed_within_imported_group_targets": 90,
+    "cross_group_target_duplicates": 0
+  },
+  "provenance": {
+    "imported_records_resolved": 270,
+    "all_samples_sha256": "dc095fae59afd0832b52d21190f890dcc69277c11e9c26b9e3521a331405826a"
+  },
+  "schema_validation": {
+    "status": "pass",
+    "records_checked": 430,
+    "errors": 0
+  },
+  "style_marker_record_counts": {
+    "本堂主": 13,
+    "胡桃": 0,
+    "嘿嘿": 9,
+    "哎呀": 7,
+    "嘛": 9,
+    "啦": 21,
+    "喽": 6
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,103 @@
+{
+  "construction": "one_contextual_prompt_completion_per_supervised_assistant_turn",
+  "dataset_name": "hutao_persona_grounded_sft_turn_view",
+  "metadata_in_model_input": false,
+  "ordering": "source_file_order_then_assistant_turn_order",
+  "schema_version": "1.0",
+  "source_dataset_version": "2.0",
+  "splits": {
+    "test": {
+      "derived_examples": 50,
+      "derived_examples_by_capability": {
+        "business_humor": 2,
+        "crisis_leadership": 6,
+        "daily_chat": 6,
+        "empathy_grief_support": 6,
+        "knowledge_boundary": 3,
+        "professional_funeral": 6,
+        "relationship_sensitive": 9,
+        "wordplay_poetry": 6,
+        "worldview_life_death": 6
+      },
+      "derived_file": "data/module_c_hutao/test.jsonl",
+      "derived_sha256": "281c21f0c8a7d9552cfbbe752725717f4857f28fc1ed2af4eba49005cff8890e",
+      "multi_turn_source_records": 16,
+      "source_file": "data/module_b_hutao/test.jsonl",
+      "source_records": 43,
+      "source_records_by_capability": {
+        "business_humor": 2,
+        "crisis_leadership": 5,
+        "daily_chat": 5,
+        "empathy_grief_support": 5,
+        "knowledge_boundary": 3,
+        "professional_funeral": 5,
+        "relationship_sensitive": 8,
+        "wordplay_poetry": 5,
+        "worldview_life_death": 5
+      },
+      "source_sha256": "d9e1f88a9ac180e2f08330f01b7093542ee6a8d59665745ad70280e1341ccf2c"
+    },
+    "train": {
+      "derived_examples": 406,
+      "derived_examples_by_capability": {
+        "business_humor": 23,
+        "crisis_leadership": 42,
+        "daily_chat": 54,
+        "empathy_grief_support": 54,
+        "knowledge_boundary": 18,
+        "professional_funeral": 54,
+        "relationship_sensitive": 71,
+        "wordplay_poetry": 36,
+        "worldview_life_death": 54
+      },
+      "derived_file": "data/module_c_hutao/train.jsonl",
+      "derived_sha256": "996c159e411b6a395920f5c3739142c6b824e52b2339217b760988db16bf61da",
+      "multi_turn_source_records": 134,
+      "source_file": "data/module_b_hutao/train.jsonl",
+      "source_records": 344,
+      "source_records_by_capability": {
+        "business_humor": 16,
+        "crisis_leadership": 34,
+        "daily_chat": 46,
+        "empathy_grief_support": 46,
+        "knowledge_boundary": 18,
+        "professional_funeral": 46,
+        "relationship_sensitive": 64,
+        "wordplay_poetry": 28,
+        "worldview_life_death": 46
+      },
+      "source_sha256": "5da8a647e0f1f52a90abb3814cbf3b1cc82a46ad146bd184e75ef7a8df91fe10"
+    },
+    "validation": {
+      "derived_examples": 50,
+      "derived_examples_by_capability": {
+        "business_humor": 2,
+        "crisis_leadership": 6,
+        "daily_chat": 6,
+        "empathy_grief_support": 6,
+        "knowledge_boundary": 3,
+        "professional_funeral": 6,
+        "relationship_sensitive": 9,
+        "wordplay_poetry": 6,
+        "worldview_life_death": 6
+      },
+      "derived_file": "data/module_c_hutao/validation.jsonl",
+      "derived_sha256": "d2aa29dbbfd583f90fe45abb9556c8151426833e67a550785715f2cef9e613c9",
+      "multi_turn_source_records": 16,
+      "source_file": "data/module_b_hutao/validation.jsonl",
+      "source_records": 43,
+      "source_records_by_capability": {
+        "business_humor": 2,
+        "crisis_leadership": 5,
+        "daily_chat": 5,
+        "empathy_grief_support": 5,
+        "knowledge_boundary": 3,
+        "professional_funeral": 5,
+        "relationship_sensitive": 8,
+        "wordplay_poetry": 5,
+        "worldview_life_death": 5
+      },
+      "source_sha256": "42562316c1a2fa3f83313154c75b08ff53b6ab5fd19526e315ba3be08cd8af0d"
+    }
+  }
+}

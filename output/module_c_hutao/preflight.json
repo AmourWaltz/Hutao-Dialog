@@ -1,0 +1,97 @@
+{
+  "environment": {
+    "git_commit": null,
+    "machine": "x86_64",
+    "packages": {
+      "accelerate": "1.14.0",
+      "bitsandbytes": null,
+      "datasets": "5.0.1",
+      "peft": "0.20.0",
+      "safetensors": "0.8.0",
+      "torch": "2.13.0+cu126",
+      "transformers": "5.15.0",
+      "trl": "1.10.0"
+    },
+    "platform": "Linux-5.14.0-427.22.1.el9_4.x86_64-x86_64-with-glibc2.34",
+    "python": "3.11.15 (main, Jun 11 2026, 15:20:16) [GCC 14.3.0]"
+  },
+  "limitations": [
+    "This preflight does not load model weights or execute a backward pass.",
+    "GPU, loss, adapter, wall-time and memory results remain unmeasured.",
+    "The held-out test split is not read by this preflight."
+  ],
+  "max_length": 256,
+  "model": {
+    "attention_implementation": "eager",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "dtype": "bfloat16",
+    "name": "Qwen/Qwen3-1.7B",
+    "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
+  },
+  "scope": "tokenizer_and_loss_mask_preflight_only",
+  "splits": {
+    "train": {
+      "decoded_supervision_samples": [
+        {
+          "id": "HT-BUS-G01-V1::A1",
+          "supervised_text": "先别被招牌吓得倒退三步。我们做的是礼仪咨询、流程安排、家属沟通和仪式执行，事项一项项列，费用一笔笔说清。你若只是提前了解，我就给你一张明白清单——价目有数，心事不加价。<|im_end|>\n"
+        },
+        {
+          "id": "HT-BUS-G01-V2::A1",
+          "supervised_text": "当然，开口不收费，听完也不会从门后滚出一张契约。你想了解流程、预算，还是璃月常见的礼仪？<|im_end|>\n"
+        }
+      ],
+      "examples": 406,
+      "file": "data/module_c_hutao/train.jsonl",
+      "over_max_length": 0,
+      "prompt_tokens": 24241,
+      "sequence_length": {
+        "maximum": 232,
+        "median": 104.5,
+        "minimum": 59,
+        "p95": 176.0
+      },
+      "sha256": "996c159e411b6a395920f5c3739142c6b824e52b2339217b760988db16bf61da",
+      "supervised_tokens": 21538,
+      "zero_supervision_examples": 0
+    },
+    "validation": {
+      "decoded_supervision_samples": [
+        {
+          "id": "HT-BUS-G07-V1::A1",
+          "supervised_text": "这笔玩笑生意不做。假消息可能让亲友恐慌，也会冒犯真正经历告别的人。若只是想办悬疑主题聚会，我能帮你改成明确标注的戏剧游戏：虚构角色、事先征得参与者同意，不使用真实讣告、遗像或公共求助渠道。谜可以藏，人的安危不能藏。<|im_end|>\n"
+        },
+        {
+          "id": "HT-BUS-G07-V2::A1",
+          "supervised_text": "效果会很大，伤害也会更大。我不会制作或传播这类假讣告。请不要拿死亡消息测试感情；生日惊喜可以换成寻宝信、角色剧本或普通邀请。若消息已经发出，立刻澄清、逐一确认收到者状态并真诚道歉，别再让误会继续扩散。<|im_end|>\n"
+        }
+      ],
+      "examples": 50,
+      "file": "data/module_c_hutao/validation.jsonl",
+      "over_max_length": 0,
+      "prompt_tokens": 2912,
+      "sequence_length": {
+        "maximum": 219,
+        "median": 104.0,
+        "minimum": 63,
+        "p95": 155.35
+      },
+      "sha256": "d2aa29dbbfd583f90fe45abb9556c8151426833e67a550785715f2cef9e613c9",
+      "supervised_tokens": 2589,
+      "zero_supervision_examples": 0
+    }
+  },
+  "status": "pass",
+  "tokenizer_artifact": {
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+    "eos_token_id": 151645,
+    "name_or_path": "Qwen/Qwen3-1.7B",
+    "pad_token_id": 151643
+  },
+  "tokenizer_backend": "transformers_auto_tokenizer"
+}

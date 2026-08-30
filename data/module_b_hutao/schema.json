@@ -1,0 +1,215 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Hu Tao persona-grounded SFT record v2",
+  "type": "object",
+  "required": ["id", "messages", "metadata"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^HT-(DLY|WDP|BUS|REL|PRO|WLD|EMP|CRI)-G(0[1-9]|10)-V[12]$"
+        },
+        {
+          "type": "string",
+          "pattern": "^hutao-(business_professional|daily_playful|grief_support|knowledge_boundary|life_death_values|liyue_relationships|poetry_wordplay|safety_crisis|traveler_paimon)-[a-z0-9_]+-v[012]$"
+        }
+      ]
+    },
+    "messages": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["role", "content"],
+        "additionalProperties": false,
+        "properties": {
+          "role": {"enum": ["system", "user", "assistant"]},
+          "content": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "required": [
+        "split",
+        "capability",
+        "scenario_group",
+        "register",
+        "seriousness",
+        "relationship",
+        "humor_types",
+        "death_topic_mode",
+        "source_basis",
+        "construction",
+        "contains_verbatim_game_text",
+        "risk_flags"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "split": {"enum": ["train", "validation", "test"]},
+        "capability": {
+          "enum": [
+            "daily_chat",
+            "wordplay_poetry",
+            "business_humor",
+            "relationship_sensitive",
+            "professional_funeral",
+            "worldview_life_death",
+            "empathy_grief_support",
+            "crisis_leadership",
+            "knowledge_boundary"
+          ]
+        },
+        "scenario_group": {"type": "string", "minLength": 1},
+        "register": {"type": "string", "minLength": 1},
+        "seriousness": {"type": "integer", "minimum": 1, "maximum": 5},
+        "relationship": {"type": "string", "minLength": 1},
+        "humor_types": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "death_topic_mode": {"type": "string", "minLength": 1},
+        "source_basis": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^A(0[1-9]|1[0-8])$"}
+        },
+        "construction": {"const": "synthetic_persona_grounded"},
+        "contains_verbatim_game_text": {"const": false},
+        "risk_flags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "external_source": {
+          "type": "string",
+          "pattern": "^all_samples\\.jsonl:L[1-9][0-9]*$"
+        },
+        "assistant_turn_policy": {"const": "final_only"},
+        "source": {
+          "type": "object",
+          "required": [
+            "dataset",
+            "line",
+            "record_sha256",
+            "record_id",
+            "group_id",
+            "source_group_id",
+            "variant",
+            "original_split",
+            "category",
+            "scene",
+            "register",
+            "relation",
+            "capabilities",
+            "risk_tags",
+            "origin",
+            "authenticity",
+            "timeline",
+            "source_ids",
+            "style_anchor_ids",
+            "verified_against_game",
+            "review_status",
+            "original_system"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "dataset": {"const": "all_samples.jsonl"},
+            "line": {"type": "integer", "minimum": 1},
+            "record_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "record_id": {"type": "string", "minLength": 1},
+            "group_id": {
+              "type": "string",
+              "pattern": "^hutao-(business_professional|daily_playful|grief_support|knowledge_boundary|life_death_values|liyue_relationships|poetry_wordplay|safety_crisis|traveler_paimon)-[a-z0-9_]+$"
+            },
+            "source_group_id": {"type": "string", "minLength": 1},
+            "variant": {"type": "integer", "minimum": 0, "maximum": 2},
+            "original_split": {"enum": ["train", "valid", "test"]},
+            "category": {
+              "enum": [
+                "business_professional",
+                "daily_playful",
+                "grief_support",
+                "knowledge_boundary",
+                "life_death_values",
+                "liyue_relationships",
+                "poetry_wordplay",
+                "safety_crisis",
+                "traveler_paimon"
+              ]
+            },
+            "scene": {"type": "string", "minLength": 1},
+            "register": {"type": "string", "minLength": 1},
+            "relation": {"type": "string", "minLength": 1},
+            "capabilities": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {"type": "string", "minLength": 1}
+            },
+            "risk_tags": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {"type": "string", "minLength": 1}
+            },
+            "origin": {"type": "string", "minLength": 1},
+            "authenticity": {"const": "synthetic_grounded_not_verbatim"},
+            "timeline": {"type": "string", "minLength": 1},
+            "source_ids": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {"type": "string", "minLength": 1}
+            },
+            "style_anchor_ids": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {"type": "string", "minLength": 1}
+            },
+            "verified_against_game": {"const": "not_applicable_synthetic"},
+            "review_status": {"type": "string", "minLength": 1},
+            "original_system": {"type": "string", "minLength": 1}
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {"required": ["source"]},
+          "then": {
+            "required": ["assistant_turn_policy"],
+            "properties": {
+              "scenario_group": {
+                "type": "string",
+                "pattern": "^EXT-hutao-(business_professional|daily_playful|grief_support|knowledge_boundary|life_death_values|liyue_relationships|poetry_wordplay|safety_crisis|traveler_paimon)-[a-z0-9_]+$"
+              },
+              "source_basis": {"maxItems": 0}
+            },
+            "not": {"required": ["external_source"]}
+          },
+          "else": {
+            "properties": {
+              "scenario_group": {
+                "type": "string",
+                "pattern": "^(DLY|WDP|BUS|REL|PRO|WLD|EMP|CRI)-G(0[1-9]|10)$"
+              },
+              "source_basis": {"minItems": 1}
+            },
+            "not": {
+              "anyOf": [
+                {"required": ["assistant_turn_policy"]},
+                {"required": ["source"]}
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

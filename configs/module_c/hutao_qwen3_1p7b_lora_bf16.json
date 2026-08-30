@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0",
+  "experiment_status": "canonical",
+  "experiment_name": "hutao_qwen3_1p7b_lora_bf16_seed42",
+  "runtime": {
+    "python_major_minor": "3.11",
+    "requirements_file": "requirements-module-c.txt",
+    "requirements_sha256": "ad21e9315015e28c13ced8182b768f969822c7f44a9155a06a868c497aef9088",
+    "lock_file": "requirements-module-c-lock-cu126.txt",
+    "lock_sha256": "b073b807cd52483d9c03d8f4317d139195886aeb9730906cf3e2ab4f0c902d85",
+    "require_cuda": true,
+    "world_size": 1,
+    "visible_cuda_devices": 1
+  },
+  "model": {
+    "name": "Qwen/Qwen3-1.7B",
+    "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "dtype": "bfloat16",
+    "attention_implementation": "eager",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
+  },
+  "data": {
+    "source_dir": "data/module_b_hutao",
+    "derived_dir": "data/module_c_hutao",
+    "max_length": 256,
+    "pad_to_multiple_of": 8,
+    "packing": false,
+    "expected_source_records": {
+      "train": 344,
+      "validation": 43,
+      "test": 43
+    },
+    "expected_derived_examples": {
+      "train": 406,
+      "validation": 50,
+      "test": 50
+    },
+    "expected_sha256": {
+      "train": "5da8a647e0f1f52a90abb3814cbf3b1cc82a46ad146bd184e75ef7a8df91fe10",
+      "validation": "42562316c1a2fa3f83313154c75b08ff53b6ab5fd19526e315ba3be08cd8af0d",
+      "test": "d9e1f88a9ac180e2f08330f01b7093542ee6a8d59665745ad70280e1341ccf2c"
+    },
+    "expected_derived_sha256": {
+      "train": "996c159e411b6a395920f5c3739142c6b824e52b2339217b760988db16bf61da",
+      "validation": "d2aa29dbbfd583f90fe45abb9556c8151426833e67a550785715f2cef9e613c9",
+      "test": "281c21f0c8a7d9552cfbbe752725717f4857f28fc1ed2af4eba49005cff8890e"
+    },
+    "expected_manifest_sha256": "ec46202c1a2f9c55f1e8ed8139d55eeae148fdc78ffe205af48f323e7ceb6c3e"
+  },
+  "method": {
+    "name": "lora",
+    "lora": {
+      "rank": 16,
+      "alpha": 32,
+      "dropout": 0.05,
+      "adapter_dtype": "float32",
+      "target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "bias": "none",
+      "expected_trainable_parameters": 3211264
+    },
+    "quantization": null
+  },
+  "training": {
+    "output_dir": "experiments/module_c_hutao/runs/hutao_qwen3_1p7b_lora_bf16_seed42",
+    "num_train_epochs": 5,
+    "per_device_train_batch_size": 4,
+    "per_device_eval_batch_size": 8,
+    "gradient_accumulation_steps": 4,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.01,
+    "lr_scheduler_type": "cosine",
+    "warmup_ratio": 0.1,
+    "max_grad_norm": 1.0,
+    "logging_steps": 1,
+    "eval_strategy": "epoch",
+    "save_strategy": "epoch",
+    "save_total_limit": 5,
+    "seed": 42,
+    "data_seed": 42,
+    "full_determinism": true,
+    "dataloader_num_workers": 0,
+    "dataloader_drop_last": false,
+    "auto_find_batch_size": false,
+    "tf32": false,
+    "gradient_checkpointing": false,
+    "optimizer": "adamw_torch",
+    "report_to": [
+      "tensorboard"
+    ]
+  },
+  "checkpoint_selection": {
+    "metric": "capability_macro_nll",
+    "greater_is_better": false,
+    "relative_tie_tolerance": 0.005,
+    "prefer_earlier_on_tie": true,
+    "required_safety_records": [
+      "HT-WLD-G07-V1",
+      "HT-WLD-G07-V2"
+    ]
+  },
+  "generation": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 192,
+    "seed": 42
+  }
+}

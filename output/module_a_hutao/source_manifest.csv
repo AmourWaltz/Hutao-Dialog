@@ -1,0 +1,24 @@
+source_id,tier,title,publisher_or_owner,url,content_type,version,language,coverage,selection_reason,use_rule,verification_status,accessed_at,notes
+OFF-01,A,《原神》官网·璃月角色页,米哈游/HoYoverse,https://ys.mihoyo.com/character/liyue?char=3,官方角色页,动态,简体中文,"身份、职业、角色简介","第一方角色事实基线","只用于事实和角色定义，不作为批量抓取页",官方第一方,2026-08-25,动态页面可能因地区或脚本加载而变化
+OFF-02,A,小心了，胡桃来啦！,Genshin Impact Official,https://www.hoyolab.com/article/214649,官方角色介绍,1.3,中文,"火元素、引蝶座、堂主与诗人双重身份","直接呈现官方设定与角色反差","persona事实与选择理由",官方第一方,2026-08-25,发布日期2021-02-27
+OFF-03,A,胡桃 HoYoWiki 条目,HoYoLAB/COGNOSPHERE,https://wiki.hoyolab.com/pc/genshin/entry/34?crawler=Googlebot&lang=,官方数据库,动态,多语言,"属性、Voice-Over入口、视频集合、Lore入口","官方集中索引，便于核验身份与媒体资料","权威校验；动态加载不作为唯一抓取源",官方第一方,2026-08-25,页面列出PV/演示/拾枝杂谈及后续活动视频
+GAME-01,A,游戏内角色资料—语音,米哈游/HoYoverse,N/A（《原神》客户端：角色→资料→语音）,游戏原始语音,动态,简体中文,"初见、天气、时间、自我、关系、探索、战斗、入队等","说话人清楚并可同时核对文字与中文配音","非战斗叫声作为风格核心；保留解锁和版本信息",游戏原文,2026-08-25,准确条数在模块B抽取去重后统计
+GAME-02,A,游戏内胡桃角色故事,米哈游/HoYoverse,N/A（《原神》客户端：角色→资料→故事）,游戏原始叙事,1.3起,简体中文,"角色详细、故事1—5、帽子、神之眼，共8个背景模块","解释成长经历、职业伦理和生死观","标记narration；除明确直接引语外不作胡桃response",游戏原文,2026-08-25,需避免把第三人称叙述误作角色台词
+GAME-03,A,引蝶之章·第一幕《奈何蝶飞去》,米哈游/HoYoverse,N/A（《原神》客户端：传说任务→引蝶之章）,游戏原始多轮剧情,1.3,简体中文,"4个子任务：神秘的往生堂、寻找不存在之人、友情愿望与遗憾、为了圆满的送别","覆盖推销、误会化解、亡魂送别、职业历史与生死观","多轮核心；保留完整场景、分支和上下文",游戏原文,2026-08-25,按场景分组切分以防泄漏
+OFF-04,A,胡桃角色PV——“吓到了吗？”,原神官方账号,https://www.bilibili.com/video/BV1T5411K7Wc,官方视频,1.3,简体中文,"初见、整蛊、业务玩笑、语速和停顿","第一人称风格浓度高且含原始中配表演","风格锚点；限制占比并处理与游戏语音重复",官方第一方,2026-08-25,发布日期2021-02-27
+OFF-05,A,角色演示——“胡桃：生人勿近”,原神官方账号,https://www.bilibili.com/video/BV1jU4y1p73u/,官方视频,1.3,简体中文,"仪式、战斗、谐音翻转和戏谑威慑","体现嬉笑与职业威严的快速切换","风格锚点；营销脚本不主导训练",官方第一方,2026-08-25,发布日期2021-03-01
+OFF-06,A,拾枝杂谈——“胡桃：雪霁梅香”,原神官方账号,https://www.bilibili.com/video/BV1o54y1h7Hq/,官方视频/旁白,1.3,简体中文,"官方对职业、生死观和早慧的概括","适合校验角色定义和价值观","主要为旁白，不标成胡桃台词",官方第一方,2026-08-25,发布日期2021-03-02
+OFF-07,A,Papilio Charontis Chapter Story Quest Overview,Genshin Impact Official,https://www.hoyolab.com/article/215954,官方任务概览,1.3,英文,"引蝶之章任务开放与章节信息","证明传说任务属于永久官方剧情","只作章节和版本核验，不回译为中文训练文本",官方第一方,2026-08-25,任务自2021-03-02开放
+OFF-08,A,磬弦奏华夜过场动画“虹歌灯宴”,原神官方账号,https://www.bilibili.com/video/BV1dM411t7Ls,官方活动过场,3.4,简体中文,"诗歌/说唱表演、社交组织与搭档互动","补充表演型语域和节奏","标记performance与limited_event；不长引歌词",官方第一方,2026-08-25,只作补充层
+OFF-09,A,Cutscene Animation: Crimson Bouquet,Genshin Impact官方认证频道,https://www.youtube.com/watch?v=msDfHMytyWs,官方活动过场,5.3,多语言字幕,"正式仪式、家族责任与危机状态","修正只有搞怪的片面印象","核验画面/表演；中文文本仍以游戏简中为准",官方第一方,2026-08-25,标记limited_event
+OFF-10,A,Cutscene Animation: Butterfly's Embrace,Genshin Impact官方认证频道,https://www.youtube.com/watch?v=dzsIw1intjo,官方活动过场,5.3,多语言字幕,"生死边界、危机与私人情感","补充严肃与脆弱语域","核验情境；中文文本仍以游戏简中为准",官方第一方,2026-08-25,标记limited_event
+DATA-01,B,DimbreathBot/AnimeGameData,DimbreathBot community,https://github.com/DimbreathBot/AnimeGameData,游戏发布数据镜像,动态,多语言,"TextMap、任务、字幕、配置等结构化数据","可按角色ID、任务和文本哈希复现定位","记录commit SHA与游戏版本；抽样回查官方原文",社区数据镜像,2026-08-25,胡桃角色ID为10000046；非版权方官方发布
+DATA-02,B,GenshinTexts,kqwyf community,https://github.com/kqwyf/GenshinTexts,文本提取工具,曾验证至4.4,多语言,"输出dialog、quest、avatar等结构并处理部分分支","降低人工复制错误并保留任务上下文","对最新版原始数据重跑；不可直接把旧产物视为完整",社区工具,2026-08-25,只作为可复现处理工具
+MIR-01,C,BWIKI胡桃语音,原神WIKI_BWIKI社区,https://wiki.biligame.com/ys/%E8%83%A1%E6%A1%83%E8%AF%AD%E9%9F%B3,游戏文本转录,动态,中日英韩,"日常、探索、战斗、入队等至少10类语音","便于逐项阅读、音频定位和人工审校","简中条目与游戏/数据镜像抽查；低信息叫声降权",社区转录待核验,2026-08-25,不以页面文件数冒充有效语料数
+MIR-02,C,BWIKI胡桃角色页,原神WIKI_BWIKI社区,https://wiki.biligame.com/ys/Hutao,游戏文本转录,动态,简体中文,"角色详细与8个背景模块","集中查看官方游戏内故事文本","作persona/lore；第三人称叙述不作response",社区转录待核验,2026-08-25,保留oldid或访问日期
+MIR-03,C,BWIKI引蝶之章,原神WIKI_BWIKI社区,https://wiki.biligame.com/ys/%E5%BC%95%E8%9D%B6%E4%B9%8B%E7%AB%A0,任务索引/转录,1.3,简体中文,"4个传说任务子任务及逐句页入口","便于人工审阅完整多轮上下文","对照结构化数据和游戏实录；按场景去重",社区转录待核验,2026-08-25,首次登场说话人可能标作问号
+MIR-04,C,BWIKI为了圆满的送别,原神WIKI_BWIKI社区,https://wiki.biligame.com/ys/%E4%B8%BA%E4%BA%86%E5%9C%86%E6%BB%A1%E7%9A%84%E9%80%81%E5%88%AB,任务逐句转录,1.3,简体中文,"边界、往生堂历史、送别狼哥、安慰老孟","严肃长答和语域切换最集中","保留前后文、旅行者分支和任务ID",社区转录待核验,2026-08-25,多分支合流须去重
+MIR-05,C,Fandom中文胡桃故事,Genshin Impact Wiki community,https://genshin-impact.fandom.com/zh/wiki/%E8%83%A1%E6%A1%83/%E6%95%85%E4%BA%8B?variant=zh-sg,游戏文本转录,动态,中文,"故事1—5、帽子、神之眼","作为第二社区来源交叉核查情节结构","不作为唯一原文；注意繁简和编辑差异",社区转录待核验,2026-08-25,社区内容而非官方网页
+MIR-06,C,BWIKI胡桃家园,原神WIKI_BWIKI社区,https://wiki.biligame.com/ys/%E8%83%A1%E6%A1%83/%E5%AE%B6%E5%9B%AD,家园对话转录,动态,简体中文,"2套偏好摆设对话，当前页面可见6句胡桃发言","补充亲近、陪伴和安抚的日常语域","少量补充；核对说话人与解锁条件",社区转录待核验,2026-08-25,不应过度代表总体语气
+MIR-07,C,BWIKI 4.1诗歌活动“叶间泪”,原神WIKI_BWIKI社区,https://wiki.biligame.com/ys/%E5%8F%B6%E9%97%B4%E6%B3%AA,活动剧情转录,4.1,简体中文,"主持、作诗、对句和多人社交","补足诗人身份与主持型表达","按完整活动场景分组；标记limited_event",社区转录待核验,2026-08-25,不可让表演体压过日常口语
+MIR-08,C,BWIKI 5.3海灯节起始,原神WIKI_BWIKI社区,https://wiki.biligame.com/ys/%E7%92%83%E6%9C%88%E6%B8%AF%E4%BD%B3%E8%8A%82%E5%85%B4%EF%BC%8C%E5%85%AB%E5%A5%87%E7%8E%B0%E7%98%B4%E7%96%A0%E9%9A%90,活动剧情转录,5.3,简体中文,"家族背景、朋友互动和边界危机开端","补足私人情感和后期角色信息","标记version=5.3与limited_event；回查官方过场",社区转录待核验,2026-08-25,作为稀有语域补充
